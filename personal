@@ -1,0 +1,501 @@
+i = 0
+Question_point = 0
+total_point = 0
+
+
+def ask_question(Question, ValueA, ValueB, ValueC, ValueD, ValueE):
+    i = 0
+    Question_point = 0
+    ans = input(Question).upper()
+    while i <= 1000:
+        if ans == "A":
+            print(f"Adding {ValueA} to your total score...")
+            Question_point += ValueA
+            break
+        elif ans == "B":
+            print(f"Adding {ValueB} to your total score...")
+            Question_point += ValueB
+            break
+        elif ans == "C":
+            print(f"Adding {ValueC} to your total score...")
+            Question_point += ValueC
+            break
+        elif ans == "D":
+            print(f"Adding {ValueD} to your score...")
+            Question_point += ValueD
+            break
+        elif ans == "E":
+            print(f"Adding {ValueE} to your total score...")
+            Question_point += ValueE
+            break
+        else:
+            ans = input("""Wrong answer please try again!!!
+            """).upper()
+            i += 1
+
+    return Question_point
+
+
+intro = input('''
+                  WELCOME HOOMAN....
+
+                   Just answer the questions, 
+                   press the corresponding keys to you prefred choice...
+                   example: press a if your answer is a.
+
+                   The score will be counted at the end and you shall see your desired results....      
+
+                  PRESS "S" WHEN YOU'RE READY 
+    ''').lower()
+
+while i < 1000:
+    if intro != 's':
+        print("Invalid key,please try again")
+        intro = input(""" press 's' to start....
+             """)
+        i += 1
+
+    elif intro == 's':
+        total_point += ask_question(f'''
+                  QUESTION 1: What colour combination do you like the most?:                 
+                    A.Crimson,Orange,Baby blue   (30)
+                    B.Turquoise,Dark green,Red   (20)
+                    C.Green,Gray,Light green     (50)
+                    D.Yellow,Blue,Navy blue      (40)
+                    E.Brown,Light gray,Dark gray (10)       
+                                ''', 30, 20, 50, 40, 10)
+        total_point += ask_question(f''' 
+                  QUESTION 2: You can have just one, what will you choose? :                        
+                    A.Body (30)
+                    B.Mind (40)
+                    C.Soul (10)a
+                    D.Harmony (20)
+                    E.Nothing (50)        
+''', 30, 40, 10, 20, 50)
+        total_point += ask_question(f''' 
+                  QUESTION 3: Which element do you think is the closest to you? :
+                    A.Earth (40)
+                    B.Metal (50)
+                    C.Water (10)
+                    D.Fire  (30)
+                    E.Wood  (20)       
+        ''', 40, 50, 10, 30, 20)
+        total_point += ask_question(f''' 
+                  QUESTION 4: Which element do you think is the closest to you? :
+                    A.Earth (40)
+                    B.Metal (50)
+                    C.Water (10)
+                    D.Fire  (30)
+                    E.Wood  (20)       
+                ''', 40, 50, 10, 30, 20)
+        total_point += ask_question(f'''
+                  QUESTION 5: How do you normally feel before an important event? :
+                    A.Anxious (40)
+                    B.Confident(30)
+                    C.Useless (10)
+                    D.Hopeful (50)
+                    E.Bored out of your mind(20)       
+                ''', 40, 30, 10, 50, 20)
+
+        total_point += ask_question(f'''
+                  QUESTION 6: If you had to choose an activity you would
+                              like to do more ofter than now, what would it be?:
+                    A.Spend more time studying (20)
+                    B.Walk more in the park (30)
+                    C.Spend more time in the comfort of your house (10)
+                    D.Go shopping and eat out (40)
+                    E.Other (50)       
+                        ''', 20, 30, 10, 40, 50)
+        total_point += ask_question(f'''
+                  QUESTION 7: Which one of the following do you think describes
+                                you best? :
+                    A.Mature    (10)
+                    B.Nerd      (30)
+                    C.Sensitive (20)
+                    D.Introvert (40)
+                    E.Extravart (50)       
+                        ''', 10, 30, 20, 40, 50)
+        total_point += ask_question(f'''
+                  QUESTION 8: Choose a location for the best weekend of 
+                                 your life? :
+                    A.In the mountains   (20)
+                    B.In the countryside (50)
+                    C.In a forest cabin  (40)
+                    D.At the seaside     (10)
+                    E.Doing extreme stuff 
+            (rock climbing,scuba diving) (30)       
+                         ''', 20, 50, 40, 10, 30)
+        total_point += ask_question(f'''
+                  QUESTION 9: What sense do you rely on most of all?
+                    Or, if u could keep only one sense, which one would it be?
+                    A.Touch   (20)
+                    B.Taste   (50)
+                    C.Smell   (10)
+                    D.Hearing (40)
+                    E.Sight   (30)       
+                                ''', 20, 50, 10, 40, 30)
+        total_point += ask_question(f'''
+                  QUESTION 10: Which problem would you solve first of all?:
+                    A.Find a cure to cancer      (40)
+                    B.End poverty                (30)
+                    C.Stop air pollution         (20)
+                    D.Put an end to animal abuse (10)
+                    E.Stop wildfires             (50)       
+                                ''', 40, 30, 20, 10, 50)
+        total_point += ask_question(f'''
+                  QUESTION 11: Which season do you prefer?:                  
+                    A.Summer (40)
+                    B.Fall   (10)
+                    C.Spring (50)
+                    D.Winter (30)
+                    E.Rain   (20)       
+                                ''', 40, 10, 50, 30, 20)
+        total_point += ask_question(f'''
+                  QUESTION 12: How would you like to describe
+                    your personality?:                  
+                    A.Motivated and helful              (50)
+                    B.Extravart /ebullient              (30)
+                    C.Gloomy and sensitive              (10)
+                    D.Always takes on new challanges    (20)
+                    E.Good at analyzing stuff and 
+                                    predicting outcomes (40)       
+                                ''', 50, 30, 10, 20, 40)
+
+        if 119 >= total_point and total_point <= 190:
+            print('''
+            Your Hidden power lies in your Extremely-well developed senses.
+            You Pay attention to the Details,and not much slips by
+            your Keen senses. Arguably an ambivert with good eyes.
+
+            WISDOM OF THE WISE:   "Think big hooman,
+                                        PEACE :) "
+            ''')
+        elif 199 > total_point and total_point < 291:
+            print('''
+            A Wise person. Intelligent , self-doubting and unsecure(or not) .....
+            A unique brain,Different perspective from the other. You see the world
+            from different angles.You have the potential to be an "INSANE" problem solver.
+            you're able to adapt to different sitautions, you learn new skills quickly , 
+            good at grasping concept.
+
+            WISDOM OF THE WISE:   "Know thyself,believe in "YOU",
+                                   And ignore all those dickheads
+                                   who make you floccinocinihilipilificate yourself
+                                   And for F's sake, try to get a girlfriend/boyfriend :') 
+                                        PEACE :) "
+            ''')
+        elif 299 > total_point and total_point < 391:
+            print('''
+            Better than the Best , Faster than the Fast, YOU ARE SPEED!!!.......
+            Speed is your hidden superpower or something....you're a quick person
+            often too intense and serious , sometimes way more serious than you should
+            be in anything..You're rarely late and often arrive to meetings earlier than
+            everyone else.You're Organized , Efficient and Punctual.Your personality 
+            helps you to stay ahead of time and manage to get much more done than most
+            people can say about themselves. 
+
+            WISDOM OF THE WISE: "Take it easy hooman,
+                                 Why so serious?
+                                    PEACE :) "
+                                    ''')
+
+        elif 399 > total_point and total_point < 491:
+            print('''
+            A supercalifragilisticexpialidocious fortune teller with excellent psychic
+            power.Allies consider you as a fortune teller with extrasensory perception
+            that helps you to predict how a situation will come out or what other's are 
+            thinking about you.
+
+            WISDOM OF THE WISE: "Dont think too much, 
+                                 Or you'll catch pneumonoultramicroscopicsilicovolcanoconiosis. 
+                                 Sorry for ruining your day :3,
+
+                                    PEACE :) "
+                                        ''')
+
+        elif 599 > total_point and total_point < 601:
+            print('''
+            An excillent mind reader with with terrific mind reading skills,sometimes so good
+            that it's almost scary(KOWAI!!)..You're able to detect emotion, catch lies and get
+            the mood of a conversation.Your senses are good hooman.You'll make a good friend.
+
+            WISDOM OF THE WISE: "You are beyond repair, 
+                                 If you're lost,
+                                 Then you're lost FOREVER
+                                 Be careful , and THINK.
+
+                                    PEACE :)"
+                                    ''')
+
+        break
+print(f'Your total score: {total_point}')
+print(f'''                          !!!! SCROLL UP !!!!!
+''')
+print('''
+
+        !!!! WARNING :  THE CONCEPT OF THIS PROGRAM WAS COPIED FROM A YOUTUBE VIDEO BY
+        THE CHANNEL "BRIGHT SIDE". I SHALL NOT BE HELP RESPONSIBLE IF YOU FIND IT INACCURATE
+        OR OFFENSIVE. ALTHOUGH I EDITED THE TEXT A LITTLE BIT, THE SCORING SYSTEM WAS NOT MADE 
+        BY ME. THANKS FOR YOUR COOPERATION. !!!!
+
+
+
+
+
+                    Thats it for today hooman, may GOD pour some blessings on your meat armour :D 
+                                    ''')
+
+exit = input("PRESS S TO EXIT").lower()
+if exit == 's':
+    print("Bye")
+
+i = 0
+Question_point = 0
+total_point = 0
+
+
+def ask_question(Question, ValueA, ValueB, ValueC, ValueD, ValueE):
+    i = 0
+    Question_point = 0
+    ans = input(Question).upper()
+    while i <= 1000:
+        if ans == "A":
+            print(f"Adding {ValueA} to your total score...")
+            Question_point += ValueA
+            break
+        elif ans == "B":
+            print(f"Adding {ValueB} to your total score...")
+            Question_point += ValueB
+            break
+        elif ans == "C":
+            print(f"Adding {ValueC} to your total score...")
+            Question_point += ValueC
+            break
+        elif ans == "D":
+            print(f"Adding {ValueD} to your score...")
+            Question_point += ValueD
+            break
+        elif ans == "E":
+            print(f"Adding {ValueE} to your total score...")
+            Question_point += ValueE
+            break
+        else:
+            ans = input("""Wrong answer please try again!!!
+            """).upper()
+            i += 1
+
+    return Question_point
+
+
+intro = input('''
+                  WELCOME HOOMAN....
+
+                   Just answer the questions, 
+                   press the corresponding keys to you prefred choice...
+                   example: press a if your answer is a.
+
+                   The score will be counted at the end and you shall see your desired results....      
+
+                  PRESS "S" WHEN YOU'RE READY 
+    ''').lower()
+
+while i < 1000:
+    if intro != 's':
+        print("Invalid key,please try again")
+        intro = input(""" press 's' to start....
+             """)
+        i += 1
+
+    elif intro == 's':
+        total_point += ask_question(f'''
+                  QUESTION 1: What colour combination do you like the most?:                 
+                    A.Crimson,Orange,Baby blue   (30)
+                    B.Turquoise,Dark green,Red   (20)
+                    C.Green,Gray,Light green     (50)
+                    D.Yellow,Blue,Navy blue      (40)
+                    E.Brown,Light gray,Dark gray (10)       
+                                ''', 30, 20, 50, 40, 10)
+        total_point += ask_question(f''' 
+                  QUESTION 2: You can have just one, what will you choose? :                        
+                    A.Body (30)
+                    B.Mind (40)
+                    C.Soul (10)a
+                    D.Harmony (20)
+                    E.Nothing (50)        
+''', 30, 40, 10, 20, 50)
+        total_point += ask_question(f''' 
+                  QUESTION 3: Which element do you think is the closest to you? :
+                    A.Earth (40)
+                    B.Metal (50)
+                    C.Water (10)
+                    D.Fire  (30)
+                    E.Wood  (20)       
+        ''', 40, 50, 10, 30, 20)
+        total_point += ask_question(f''' 
+                  QUESTION 4: Which element do you think is the closest to you? :
+                    A.Earth (40)
+                    B.Metal (50)
+                    C.Water (10)
+                    D.Fire  (30)
+                    E.Wood  (20)       
+                ''', 40, 50, 10, 30, 20)
+        total_point += ask_question(f'''
+                  QUESTION 5: How do you normally feel before an important event? :
+                    A.Anxious (40)
+                    B.Confident(30)
+                    C.Useless (10)
+                    D.Hopeful (50)
+                    E.Bored out of your mind(20)       
+                ''', 40, 30, 10, 50, 20)
+
+        total_point += ask_question(f'''
+                  QUESTION 6: If you had to choose an activity you would
+                              like to do more ofter than now, what would it be?:
+                    A.Spend more time studying (20)
+                    B.Walk more in the park (30)
+                    C.Spend more time in the comfort of your house (10)
+                    D.Go shopping and eat out (40)
+                    E.Other (50)       
+                        ''', 20, 30, 10, 40, 50)
+        total_point += ask_question(f'''
+                  QUESTION 7: Which one of the following do you think describes
+                                you best? :
+                    A.Mature    (10)
+                    B.Nerd      (30)
+                    C.Sensitive (20)
+                    D.Introvert (40)
+                    E.Extravart (50)       
+                        ''', 10, 30, 20, 40, 50)
+        total_point += ask_question(f'''
+                  QUESTION 8: Choose a location for the best weekend of 
+                                 your life? :
+                    A.In the mountains   (20)
+                    B.In the countryside (50)
+                    C.In a forest cabin  (40)
+                    D.At the seaside     (10)
+                    E.Doing extreme stuff 
+            (rock climbing,scuba diving) (30)       
+                         ''', 20, 50, 40, 10, 30)
+        total_point += ask_question(f'''
+                  QUESTION 9: What sense do you rely on most of all?
+                    Or, if u could keep only one sense, which one would it be?
+                    A.Touch   (20)
+                    B.Taste   (50)
+                    C.Smell   (10)
+                    D.Hearing (40)
+                    E.Sight   (30)       
+                                ''', 20, 50, 10, 40, 30)
+        total_point += ask_question(f'''
+                  QUESTION 10: Which problem would you solve first of all?:
+                    A.Find a cure to cancer      (40)
+                    B.End poverty                (30)
+                    C.Stop air pollution         (20)
+                    D.Put an end to animal abuse (10)
+                    E.Stop wildfires             (50)       
+                                ''', 40, 30, 20, 10, 50)
+        total_point += ask_question(f'''
+                  QUESTION 11: Which season do you prefer?:                  
+                    A.Summer (40)
+                    B.Fall   (10)
+                    C.Spring (50)
+                    D.Winter (30)
+                    E.Rain   (20)       
+                                ''', 40, 10, 50, 30, 20)
+        total_point += ask_question(f'''
+                  QUESTION 12: How would you like to describe
+                    your personality?:                  
+                    A.Motivated and helful              (50)
+                    B.Extravart /ebullient              (30)
+                    C.Gloomy and sensitive              (10)
+                    D.Always takes on new challanges    (20)
+                    E.Good at analyzing stuff and 
+                                    predicting outcomes (40)       
+                                ''', 50, 30, 10, 20, 40)
+
+        if 119 >= total_point and total_point <= 190:
+            print('''
+            Your Hidden power lies in your Extremely-well developed senses.
+            You Pay attention to the Details,and not much slips by
+            your Keen senses. Arguably an ambivert with good eyes.
+
+            WISDOM OF THE WISE:   "Think big hooman,
+                                        PEACE :) "
+            ''')
+        elif 199 > total_point and total_point < 291:
+            print('''
+            A Wise person. Intelligent , self-doubting and unsecure(or not) .....
+            A unique brain,Different perspective from the other. You see the world
+            from different angles.You have the potential to be an "INSANE" problem solver.
+            you're able to adapt to different sitautions, you learn new skills quickly , 
+            good at grasping concept.
+
+            WISDOM OF THE WISE:   "Know thyself,believe in "YOU",
+                                   And ignore all those dickheads
+                                   who make you floccinocinihilipilificate yourself
+                                   And for F's sake, try to get a girlfriend/boyfriend :') 
+                                        PEACE :) "
+            ''')
+        elif 299 > total_point and total_point < 391:
+            print('''
+            Better than the Best , Faster than the Fast, YOU ARE SPEED!!!.......
+            Speed is your hidden superpower or something....you're a quick person
+            often too intense and serious , sometimes way more serious than you should
+            be in anything..You're rarely late and often arrive to meetings earlier than
+            everyone else.You're Organized , Efficient and Punctual.Your personality 
+            helps you to stay ahead of time and manage to get much more done than most
+            people can say about themselves. 
+
+            WISDOM OF THE WISE: "Take it easy hooman,
+                                 Why so serious?
+                                    PEACE :) "
+                                    ''')
+
+        elif 399 > total_point and total_point < 491:
+            print('''
+            A supercalifragilisticexpialidocious fortune teller with excellent psychic
+            power.Allies consider you as a fortune teller with extrasensory perception
+            that helps you to predict how a situation will come out or what other's are 
+            thinking about you.
+
+            WISDOM OF THE WISE: "Dont think too much, 
+                                 Or you'll catch pneumonoultramicroscopicsilicovolcanoconiosis. 
+                                 Sorry for ruining your day :3,
+
+                                    PEACE :) "
+                                        ''')
+
+        elif 599 > total_point and total_point < 601:
+            print('''
+            An excillent mind reader with with terrific mind reading skills,sometimes so good
+            that it's almost scary(KOWAI!!)..You're able to detect emotion, catch lies and get
+            the mood of a conversation.Your senses are good hooman.You'll make a good friend.
+
+            WISDOM OF THE WISE: "You are beyond repair, 
+                                 If you're lost,
+                                 Then you're lost FOREVER
+                                 Be careful , and THINK.
+
+                                    PEACE :)"
+                                    ''')
+
+        break
+print(f'Your total score: {total_point}')
+print(f'''                          !!!! SCROLL UP !!!!!
+''')
+print('''
+
+        !!!! WARNING :  THE CONCEPT OF THIS PROGRAM WAS COPIED FROM A YOUTUBE VIDEO BY
+        THE CHANNEL "BRIGHT SIDE". I SHALL NOT BE HELP RESPONSIBLE IF YOU FIND IT INACCURATE
+        OR OFFENSIVE. ALTHOUGH I EDITED THE TEXT A LITTLE BIT, THE SCORING SYSTEM WAS NOT MADE 
+        BY ME. THANKS FOR YOUR COOPERATION. !!!!
+
+
+
+
+
+                    Thats it for today hooman, may GOD pour some blessings on your meat armour :D 
+                                    ''')
+
+exit = input("PRESS S TO EXIT").lower()
+if exit == 's':
+    print("Bye")
